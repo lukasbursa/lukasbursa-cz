@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+import SharedLayout from "./pages/SharedLayout"
+import Home from "./pages/Home"
+import Offers from "./pages/Offers"
+import Blog from "./pages/Blog"
+import BlogPost from "./pages/BlogPost"
+import Policies from "./pages/Policies"
+import FreeEstimate from "./pages/FreeEstimate"
+import Error404 from "./pages/Error404"
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <SharedLayout /> }>
+          <Route index element={ <Home /> } />
+          <Route path="/nemovitosti" element={ <Offers /> } />
+          <Route path="/clanky" element={ <Blog /> } />
+          <Route path="/clanky/:postUrl" element={ <BlogPost /> } />
+          <Route path="/ochrana-osobnich-udaju" element={ <Policies /> } />
+          <Route path="/odhad-zdarma" element={ <FreeEstimate /> } />
+          <Route path="*" element={ <Error404 /> } />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
