@@ -1,0 +1,44 @@
+.navbar .nav-link {
+    color: black;
+    position: relative;
+}
+
+.navbar .nav-link strong {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 25%;
+        background-color: black;
+        transform-origin: bottom center;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom center;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}

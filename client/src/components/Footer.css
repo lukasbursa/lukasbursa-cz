@@ -1,4 +1,9 @@
-footer{
-    background-color: #06283D;
-    
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover{
+    text-decoration: underline;
+    color: white;
 }

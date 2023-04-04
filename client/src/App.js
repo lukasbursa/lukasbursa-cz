@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route, HashRouter } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import SharedLayout from "./pages/SharedLayout"
@@ -12,8 +12,9 @@ import FreeEstimate from "./pages/FreeEstimate"
 import Error404 from "./pages/Error404"
 
 const App = () => {
+
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={ <SharedLayout /> }>
           <Route index element={ <Home /> } />
@@ -25,7 +26,7 @@ const App = () => {
           <Route path="*" element={ <Error404 /> } />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

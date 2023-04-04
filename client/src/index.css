@@ -1,0 +1,28 @@
+.text-justify {
+    text-align: justify;
+}
+
+.bg-dark a {
+    color: white;
+    text-decoration: underline;
+
+}
+
+.bg-dark a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.link{
+    color: black;
+}
+
+.link:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-space{
+    box-sizing: border-box;
+    padding-top: 100px;
+}
