@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const FormContact = () => {
@@ -39,7 +39,7 @@ const FormContact = () => {
       <form ref={contactForm} onSubmit={sendContactEmail}>
         <div className="mb-3">
           <label htmlFor="contactForm_name" className="form-label">
-            Jméno a příjmení
+            Jméno a příjmení *
           </label>
           <input
             type="text"
@@ -51,7 +51,7 @@ const FormContact = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="contactForm_email" className="form-label">
-            E-mail
+            E-mail *
           </label>
           <input
             type="email"
@@ -63,7 +63,7 @@ const FormContact = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="contactForm_phone" className="form-label">
-            Telefonní číslo
+            Telefonní číslo *
           </label>
           <input
             type="text"
@@ -75,7 +75,7 @@ const FormContact = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="contactForm_message" className="form-label">
-            Zpráva
+            Zpráva *
           </label>
           <textarea
             className="form-control"

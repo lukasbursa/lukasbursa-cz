@@ -1,9 +1,9 @@
-.links a{
+.links a {
     color: white;
     text-decoration: none;
 }
 
-.links a:hover{
+.links a:hover {
     text-decoration: underline;
     color: white;
 }

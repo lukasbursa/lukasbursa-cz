@@ -1,16 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-
+import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
     <header className="container-fluid">
-      <nav className="navbar navbar-expand-md bg-body-tertiary bg-white fixed-top" id="navbar">
+      <nav
+        className="navbar navbar-expand-md bg-body-tertiary bg-white fixed-top"
+        id="navbar"
+      >
         <div className="container">
-          <NavLink className="navbar-brand fs-1 text-uppercase fw-bolder" to="/">
+          <Link className="navbar-brand fs-1 text-uppercase fw-bolder" to="/">
             Lukáš Burša
-          </NavLink>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,18 +30,21 @@ const Header = () => {
                   Úvod
                 </NavLink>
               </li>
-              
               {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/nemovitosti">
                   Nemovitosti
                 </NavLink>
               </li> */}
               <li className="nav-item">
-                <NavLink className="nav-link" to="https://www.sreality.cz/adresar/keller-williams-moravia-brno-veveri/32747/makleri/172158" target="_blank">
+                <a
+                  className="nav-link"
+                  href="https://www.sreality.cz/adresar/keller-williams-moravia-brno-veveri/32747/makleri/172158"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Nemovitosti
-                </NavLink>
+                </a>
               </li>
-
               {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/clanky">
                   Články
