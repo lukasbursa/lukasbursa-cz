@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
 
     RewriteEngine On
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ http://www.lukasbursa.cz/$1 [L,R=301]
+
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://www.lukasbursa.cz/$1 [L,R=301]
+
     RewriteBase /
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
